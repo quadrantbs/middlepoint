@@ -10,4 +10,4 @@ Here's a user guide for the web page:
 5. If you want to reset the input boxes and the map, click the "Reset" button.
 6. The list of locations you have entered will be displayed below the input boxes.
 
-That's it! Enjoy using the web page to find the middle point between two locations.
+That's it! Enjoy using the web page to find the middle point between two or more locations.
