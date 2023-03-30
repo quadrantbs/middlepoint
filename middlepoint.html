@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>OpenStreetMap with OpenLayers</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://openlayers.org/en/v6.6.1/build/ol.js"></script>
+</head>
+
+<body>
+  <header>Find Middle Point by Quadrant</header>
+  <div class="container">
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="attribution">Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors,
+        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>
+      </div>
+    </div>
+    <div class="sidebar">
+      <h2>Locations</h2>
+      <ul id="locations"></ul>
+      <button id=reload-button onclick="location.reload()">Reset</button>
+      <div id="buttons-container">
+        <a id="open-gmaps-link" href="#" target="_blank"> Open Middle Point in Google Maps</a>
+        <button id="find-middle-point-button">Find Middle Point</button>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
