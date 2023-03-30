@@ -1,161 +1,10 @@
 /* general styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #BF9C69 ;
-}
 
-header {
-    background-color: #BF9C69 ;
-    color: #565655;
-    padding: 10px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  }  
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #565655;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-
-/* map styles */
-#map {
-    width: 100%;
-    height: 500px;
-    position: relative;
-}
-
-.ol-attribution {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    font-size: 1px;
-}
-
-.attribution {
-    font-size: 8px;
-}
-
-/* marker list styles */
-#locations {
-    max-height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#locations li {
-    margin-bottom: 5px;
-    list-style-type: none;
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #ffffff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
-
-#locations li:hover {
-    background-color: #fcb2f2;
-}
-
-#locations li i {
-    margin-right: 10px;
-    background-color: #DDD9D5;
-    color: #565655;
-    font-size: 20px;
-}
-
-#buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#open-gmaps-link {
-    bottom: 10px;
-    background-color: #AB6F82;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    display: none;
-}
-#open-gmaps-link:hover {
-    background-color: #ffc8c8;
-    color: #585858;
-}
-
-/* center button styles */
-#find-middle-point-button {
-    margin-left: 5px;
-    bottom: 10px;
-    height: 40px;
-    left: 50%;
-    background-color: #AB6F82;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-#find-middle-point-button:hover {
-    background-color: #ffc8c8;
-    color: #585858;
-}
-
-#reload-button {
-    margin-right: 5px;
-    left: 50%;
-    display: inline-block;
-    height: 40px;
-    padding: 10px;
-    border-radius: 10%;
-    background-color: #AB6F82;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    font-size: 16px;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-}
-
-#reload-button:hover {
-    background-color: #ffc8c8;
-    color: #585858;
-}
-
-#user-guide {
-  padding: 10px;
-  color: #ffffff;
-}
 
 
 /* Media queries for screens smaller than 600px */
 @media (max-width: 600px) {
+
   /* Adjust header size */
   header {
     font-size: 20px;
@@ -192,6 +41,7 @@ h2 {
 
 /* Media queries for screens between 600px and 900px */
 @media (min-width: 600px) and (max-width: 900px) {
+
   /* Adjust header size */
   header {
     font-size: 22px;
@@ -210,16 +60,19 @@ h2 {
   }
 
   /* Adjust buttons */
-  #find-middle-point-button {
+  button{
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 5px;
+  }
+
+  .button{
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   #reload-button {
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 5px;
   }
 
   /* Adjust map size */
@@ -228,43 +81,129 @@ h2 {
   }
 }
 
-/* Media queries for screens larger than 900px */
-@media (min-width: 900px) {
-  /* Adjust header size */
-  header {
-    font-size: 26px;
-  }
 
-  /* Adjust location list height */
-  #locations {
-    max-height: 70vh;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #BF9C69;
+}
 
-  /* Adjust button container */
-  #buttons-container {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-  }
+header {
+  background-color: #BF9C69;
+  color: #565655;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+}
 
-  /* Adjust buttons */
-  #find-middle-point-button {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 5px;
-    width: auto;
-  }
+h1 {
+  text-align: center;
+}
 
-  #reload-button {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 5px;
-    width: auto;
-  }
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
-  /* Adjust map size */
-  #map {
-    height: 50vh;
-    width: 100%;
-  }
+
+/* map styles */
+#map {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.ol-attribution {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 1px;
+}
+
+.attribution {
+  font-size: 8px;
+}
+
+/* marker list styles */
+#locations {
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#locations li {
+  margin-bottom: 5px;
+  list-style-type: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+#locations li:hover {
+  background-color: #c5c5c5;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  bottom: 10px;
+  left: 50%;
+  background-color: #AB6F82;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover{
+  background-color: #5f404a;
+  color: #ffffff;
+}
+
+button {
+  font-size: 200px;
+  margin-left: 10px;
+  bottom: 10px;
+  background-color: #AB6F82;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+button:hover{
+  background-color: #5f404a;
+  color: #ffffff;
+}
+
+#user-guide {
+  padding: 10px;
+  color: #ffffff;
+}
+
+/* Adjust map size */
+#map {
+  height: 50vh;
+  width: 100%;
 }

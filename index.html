@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenStreetMap with OpenLayers</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://openlayers.org/en/v6.6.1/build/ol.js"></script>
@@ -20,7 +21,7 @@
       <h2>Locations</h2>
       <ul id="locations"></ul>
       <div id="buttons-container">
-        <a id="open-gmaps-link" href="#" target="_blank"> Open Middle Point in Google Maps</a>
+        <a id="open-gmaps-link" href="#" target="_blank" class="button" style="display: none;"> Open Middle Point in Google Maps </a>
         <button id=reload-button onclick="location.reload()">Reset</button>
         <button id="find-middle-point-button">Find Middle Point</button>
       </div>

@@ -82,13 +82,6 @@ function getVillageName(lon, lat) {
     return village;
 }
 
-function getLocationInfo(location) {
-    var lon = location.longitude;
-    var lat = location.latitude;
-    var village = getVillageName(lon, lat);
-    return 'Village: ' + village;
-}
-
 function updateLocationsList() {
     var locationsList = document.getElementById('locations');
     locationsList.innerHTML = '';
