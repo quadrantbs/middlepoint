@@ -66,7 +66,7 @@ function initMap() {
 }
 
 function getVillageName(lon, lat) {
-    var url = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=' + lat + '&lon=' + lon;
+    var url = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=' + lat + '&lon=' + lon + '&addressdetails=1';
     var village = '';
     var request = new XMLHttpRequest();
     request.open('GET', url, false);
@@ -74,8 +74,9 @@ function getVillageName(lon, lat) {
 
     if (request.status === 200) {
         var result = JSON.parse(request.responseText);
-        if (result.address && result.address.village) {
-            village = result.address.village;
+        if (result.address) {
+            village = result.address.road + ', ' + result.address.suburb + ', ' + result.address.city + ', ' + result.address.country;
+            console.log(village)
         }
     }
     return village;
@@ -100,7 +101,7 @@ function updateLocationsList() {
         xhr.open('GET', 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=' + location.latitude + '&lon=' + location.longitude, false);
         xhr.send();
         var response = JSON.parse(xhr.responseText);
-        var village = response.address.village;
+        var village = response.display_name;
 
         var li = document.createElement('li');
         li.innerHTML = village;

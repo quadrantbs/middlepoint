@@ -3,12 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ebc000 ;
+    background-color: #BF9C69 ;
 }
 
 header {
-    background-color: #ebc000 ;
-    color: #357446;
+    background-color: #BF9C69 ;
+    color: #565655;
     padding: 10px;
     text-align: center;
     font-size: 24px;
@@ -26,7 +26,7 @@ h2 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #357446;
+    color: #565655;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -66,7 +66,7 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     padding: 10px;
-    background-color: #e95cfc;
+    background-color: #ffffff;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -78,8 +78,8 @@ h2 {
 
 #locations li i {
     margin-right: 10px;
-    background-color: #e95cfc;
-    color: #333;
+    background-color: #DDD9D5;
+    color: #565655;
     font-size: 20px;
 }
 
@@ -91,7 +91,7 @@ h2 {
 
 #open-gmaps-link {
     bottom: 10px;
-    background-color: #ff5d5d;
+    background-color: #AB6F82;
     color: #ffffff;
     border: 2px solid #ffffff;
     padding: 10px;
@@ -112,7 +112,7 @@ h2 {
     bottom: 10px;
     height: 40px;
     left: 50%;
-    background-color: #ff5d5d;
+    background-color: #AB6F82;
     color: #ffffff;
     border: 2px solid #ffffff;
     padding: 10px;
@@ -134,7 +134,7 @@ h2 {
     height: 40px;
     padding: 10px;
     border-radius: 10%;
-    background-color: #ff5d5d;
+    background-color: #AB6F82;
     color: #ffffff;
     border: 2px solid #ffffff;
     font-size: 16px;
@@ -151,74 +151,115 @@ h2 {
 
 /* Media queries for screens smaller than 600px */
 @media (max-width: 600px) {
-    /* Adjust header size */
-    header {
-      font-size: 20px;
-    }
-  
-    /* Adjust location list height */
-    #locations {
-      max-height: 150px;
-    }
-  
-    /* Adjust button container */
-    #buttons-container {
-      flex-wrap: wrap;
-    }
-  
-    /* Adjust buttons */
-    #find-middle-point-button {
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-  
-    #reload-button {
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
+  /* Adjust header size */
+  header {
+    font-size: 20px;
   }
-  
-  /* Media queries for screens between 600px and 900px */
-  @media (min-width: 600px) and (max-width: 900px) {
-    /* Adjust header size */
-    header {
-      font-size: 22px;
-    }
-  
-    /* Adjust location list height */
-    #locations {
-      max-height: 180px;
-    }
+
+  /* Adjust location list height */
+  #locations {
+    max-height: 50vh;
   }
-  
-  /* Media queries for screens larger than 900px */
-  @media (min-width: 900px) {
-    /* Adjust header size */
-    header {
-      font-size: 26px;
-    }
-  
-    /* Adjust location list height */
-    #locations {
-      max-height: 220px;
-    }
-  
-    /* Adjust button container */
-    #buttons-container {
-      flex-wrap: nowrap;
-    }
-  
-    /* Adjust buttons */
-    #find-middle-point-button {
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 5px;
-    }
-  
-    #reload-button {
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-right: 5px;
-    }
+
+  /* Adjust button container */
+  #buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
+
+  /* Adjust buttons */
+  #find-middle-point-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #reload-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* Adjust map size */
+  #map {
+    height: 50vh;
+  }
+}
+
+/* Media queries for screens between 600px and 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Adjust header size */
+  header {
+    font-size: 22px;
+  }
+
+  /* Adjust location list height */
+  #locations {
+    max-height: 60vh;
+  }
+
+  /* Adjust button container */
+  #buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Adjust buttons */
+  #find-middle-point-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+
+  #reload-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  /* Adjust map size */
+  #map {
+    height: 50vh;
+  }
+}
+
+/* Media queries for screens larger than 900px */
+@media (min-width: 900px) {
+  /* Adjust header size */
+  header {
+    font-size: 26px;
+  }
+
+  /* Adjust location list height */
+  #locations {
+    max-height: 70vh;
+  }
+
+  /* Adjust button container */
+  #buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  /* Adjust buttons */
+  #find-middle-point-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    width: auto;
+  }
+
+  #reload-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5px;
+    width: auto;
+  }
+
+  /* Adjust map size */
+  #map {
+    height: 50vh;
+    width: 100%;
+  }
+}
