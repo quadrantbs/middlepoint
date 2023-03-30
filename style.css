@@ -148,6 +148,11 @@ h2 {
     color: #585858;
 }
 
+#user-guide {
+  padding: 10px;
+  color: #ffffff;
+}
+
 
 /* Media queries for screens smaller than 600px */
 @media (max-width: 600px) {
