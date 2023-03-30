@@ -75,8 +75,7 @@ function getVillageName(lon, lat) {
     if (request.status === 200) {
         var result = JSON.parse(request.responseText);
         if (result.address) {
-            village = result.address.road + ', ' + result.address.suburb + ', ' + result.address.city + ', ' + result.address.country;
-            console.log(village)
+            village = result.display_name;
         }
     }
     return village;
@@ -139,16 +138,16 @@ function findMiddlePoint() {
     // Update the href attribute of the link
     var gmapsLink = document.getElementById('open-gmaps-link');
     gmapsLink.href = url;
-  
+
     // Show the link
-    const element = document.getElementById('open-gmaps-link'); // replace with your element's ID
+    const element = document.getElementById('open-gmaps-link');
     element.style.display = 'inline-block';
 
     gmapsLink.style.display = 'inline-block';
 }
-  
-    
-  
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     initMap();

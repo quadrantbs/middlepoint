@@ -60,12 +60,12 @@
   }
 
   /* Adjust buttons */
-  button{
+  button {
     margin-top: 5px;
     margin-bottom: 5px;
   }
 
-  .button{
+  .button {
     margin-top: 5px;
     margin-bottom: 5px;
   }
@@ -173,7 +173,7 @@ h2 {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.button:hover{
+.button:hover {
   background-color: #5f404a;
   color: #ffffff;
 }
@@ -192,7 +192,7 @@ button {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-button:hover{
+button:hover {
   background-color: #5f404a;
   color: #ffffff;
 }
