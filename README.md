@@ -4,7 +4,7 @@ https://quadrantbs.github.io/middlepoint/
 
 Here's a user guide for the web page:
 
-1. Enter the addresses by clicking on the map of the addresses you want to find the middle point of in the input boxes provided on the page.
+1. Enter the addresses by clicking on the map of the locations you want to find the middle point of.
 2. Once you have entered the addresses, click the "Find Middle Point" button to calculate the middle point between the two locations.
 3. The map will display the middle point. You can click "Open in Google Maps" to open it in gmaps for further exploration of the middle point.
 5. If you want to reset the input boxes and the map, click the "Reset" button.
